@@ -33,5 +33,6 @@
     "only-allow": "^1.2.1",
     "eslint-plugin-jsdoc": "^39.3.3",
     "eslint-plugin-prettier": "^5.0.0"
-  }
+  },
+  "packageManager": "pnpm@9.12.3"
 }

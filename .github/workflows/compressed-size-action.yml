@@ -1,0 +1,15 @@
+name: Compressed Size
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/pnpm-setup-node
+      - uses: preactjs/compressed-size-action@v2
+        with:
+          build-script: 'sdk build'
+          exclude: '{**/*.map,**/node_modules/**,**/dist/chunk-*.{js,cjs,mjs}}'
+          pattern: './packages/sdk/dist/**/*.{js,mjs}'
