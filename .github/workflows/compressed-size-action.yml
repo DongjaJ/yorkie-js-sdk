@@ -15,6 +15,6 @@ jobs:
           cache-dependency-path: 'pnpm-lock.yaml'
       - uses: preactjs/compressed-size-action@v2
         with:
-          build-script: 'pnpm sdk build'
+          build-script: 'sdk build'
           exclude: '{**/*.map,**/node_modules/**,**/dist/chunk-*.{js,cjs,mjs}}'
           pattern: './packages/sdk/dist/**/*.{js,mjs}'
